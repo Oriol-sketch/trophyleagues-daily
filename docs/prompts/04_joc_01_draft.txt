@@ -1,0 +1,1 @@
+Afegeix només el joc Draft d’onzes històrics. Implementa categories, formació, rondes, cartes de jugador, validació de posicions, puntuació explicable, resultat i targeta compartible. Mantén-lo en 2–3 minuts. No reescriguis els altres modes. Usa dades separades i una estètica pròpia sense fotos, escuts ni logos.

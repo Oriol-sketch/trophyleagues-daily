@@ -1,0 +1,1 @@
+Afegeix només Manager en 60 segons. Implementa formació, estil de joc, onze, focus d’entrenament, substitució i simulació explicada. El jugador ha d’entendre per què ha guanyat o perdut. No afegeixis més de cinc decisions.

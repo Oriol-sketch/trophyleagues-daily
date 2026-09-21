@@ -1,0 +1,61 @@
+.game-card {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  color: inherit;
+  align-items: center;
+}
+
+.thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #123;
+}
+
+.art-cup { background: radial-gradient(circle at 50% 30%, #f8e38a, #8a6a12); }
+.art-pitch { background: linear-gradient(180deg, #167a3a, #0c3d1e); }
+.art-arrows { background: linear-gradient(135deg, #ef4444, #0ea5e9); }
+.art-crisis { background: linear-gradient(160deg, #1e3a5f, #111827); }
+.art-market { background: linear-gradient(160deg, #7f1d1d, #111827); }
+.art-chaos { background: linear-gradient(160deg, #7c3aed, #111827); }
+.art-globe { background: radial-gradient(circle at 30% 30%, #38bdf8, #0f3b2e); }
+
+.game-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.game-body strong {
+  font-size: 0.95rem;
+}
+
+.game-body em {
+  font-style: normal;
+  color: var(--muted-light);
+  font-size: 0.78rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--muted-light);
+  font-size: 0.72rem;
+}
+
+.pts {
+  color: var(--pitch-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}

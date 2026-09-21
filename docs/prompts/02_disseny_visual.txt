@@ -1,0 +1,1 @@
+Aplica el sistema visual definit a l’especificació. Mobile-first, futbolístic, modern i premium, amb targetes grans, botons clars i animacions breus. No copiïs cap marca ni interfície. Millora jerarquia, responsive, accessibilitat i pantalla de resultat sense canviar la lògica.

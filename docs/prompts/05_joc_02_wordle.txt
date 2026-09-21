@@ -1,0 +1,1 @@
+Afegeix només Quin jugador és? tipus Wordle. Sis intents, pistes progressives, resposta del dia, ratxa, puntuació i compartir sense revelar la resposta. No modifiquis Draft ni l’arquitectura comuna.

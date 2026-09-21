@@ -1,0 +1,19 @@
+{
+  "games": [
+    { "id": "draft-onzes", "title": "Draft d’onzes històrics", "duration": "3 min", "type": "draft", "difficulty": "mitjana" },
+    { "id": "quin-jugador", "title": "Quin jugador és?", "duration": "1 min", "type": "identitat", "difficulty": "fàcil" },
+    { "id": "fitxa-passa", "title": "Fitxa o passa", "duration": "90 s", "type": "scouting", "difficulty": "mitjana" },
+    { "id": "manager-60", "title": "Manager en 60 segons", "duration": "60 s", "type": "decisió", "difficulty": "mitjana" },
+    { "id": "draft-impossible", "title": "Draft impossible", "duration": "3 min", "type": "draft", "difficulty": "difícil" },
+    { "id": "press-conference", "title": "Press conference", "duration": "90 s", "type": "humor", "difficulty": "fàcil" },
+    { "id": "carrera-misteriosa", "title": "Carrera misteriosa", "duration": "2 min", "type": "identitat", "difficulty": "mitjana" },
+    { "id": "qui-guanya", "title": "Qui guanya aquest partit?", "duration": "90 s", "type": "predició", "difficulty": "mitjana" },
+    { "id": "mercat", "title": "Mercat de fitxatges", "duration": "2 min", "type": "estratègia", "difficulty": "mitjana" },
+    { "id": "var", "title": "El VAR ha parlat", "duration": "60 s", "type": "decisió", "difficulty": "fàcil" },
+    { "id": "ascens", "title": "Ascens exprés", "duration": "3 min", "type": "gestió", "difficulty": "difícil" },
+    { "id": "president", "title": "Simulador de president", "duration": "3 min", "type": "gestió", "difficulty": "difícil" },
+    { "id": "football-chaos", "title": "Football Chaos", "duration": "2 min", "type": "humor", "difficulty": "fàcil" },
+    { "id": "on-es-jugador", "title": "On és el jugador?", "duration": "90 s", "type": "geografia", "difficulty": "mitjana" },
+    { "id": "daily", "title": "TrophyLeagues Daily", "duration": "2 min", "type": "mix", "difficulty": "mitjana" }
+  ]
+}

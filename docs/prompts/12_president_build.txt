@@ -1,0 +1,8 @@
+Adjunta aquests fitxers abans d’enviar aquest prompt:
+- 00_GUIA_PRINCIPAL.md
+- 02_ESPECIFICACIO_APP.md
+- games/12_simulador_president.md
+- data/president_crises.json
+- data/president_results.json
+
+Implementa exactament el Joc 12 Simulador de President segons la seva especificació. No construeixis cap altre joc. Reutilitza la navegació, puntuació, pantalla de resultat i compartir de la plataforma. Mostra primer els fitxers que modificaràs i el flux de dades. Després implementa les quatre pantalles, carrega les deu crisis des de JSON, aplica modificadors, limita valors entre 0 i 100, calcula resultat i permet reiniciar. Al final fes proves manuals de les deu crisis i informa de qualsevol error sense amagar-lo.

@@ -1,0 +1,180 @@
+TROPHYLEAGUES DAILY
+Estratègia de minijocs, MVP i prompts per a Google AI Studio
+
+OBJECTIU
+Crear una plataforma de reptes futbolístics ràpids que generi audiència, debat i comunitat al voltant de TrophyLeagues. Els minijocs són la porta d’entrada; TrophyLeagues és el producte principal.
+
+RECOMANACIÓ GENERAL
+Començar amb una web app/PWA, no amb una app nativa. Això permet validar ràpidament. Si hi ha ús recurrent, es pot empaquetar com a APK més endavant.
+
+TOP 15, ORDENAT DE PITJOR A MILLOR
+
+15. ON ÉS EL JUGADOR?
+Format: geografia i trivia.
+Identificar un jugador, club o selecció amb pistes de país, ciutat o ruta de fitxatges.
+Pot funcionar perquè és internacional i fàcil d’ampliar. Risc: menys emocional que la nostàlgia.
+
+14. FOOTBALL CHAOS
+Format: arcade humorístic.
+Partits de 60 segons amb pilotes gegants, camps inclinats, dos gols o porters que reboten.
+Pot donar clips divertits. Risc: competeix amb molts arcades semblants; necessita una física i estètica pròpies.
+
+13. EL VAR HA PARLAT
+Format: debat i decisions.
+Decidir si una jugada és penal, vermella, fora de joc o simulació i comparar la resposta amb la comunitat.
+Pot generar discussions immediates. Risc: les situacions han de semblar justes.
+
+12. SIMULADOR DE PRESIDENT
+Format: humor i decisions.
+Gestionar crisis absurdes: l’estrella vol marxar, l’afició exigeix un fitxatge impossible i el patrocinador vol canviar el nom de l’estadi.
+Pot funcionar molt bé en vídeos curts. Risc: pot donar visualitzacions sense convertir usuaris a TrophyLeagues.
+
+11. ASCENS EXPRÉS
+Format: manager curt.
+Començar en una divisió baixa i prendre decisions per intentar pujar en una temporada comprimida.
+Resumeix la fantasia de construir un club. Risc: massa automàtic o massa complex.
+
+10. CARRERA MISTERIOSA
+Format: trivia i memòria.
+Reconèixer un jugador a partir dels clubs, companys, anys o seleccions de la seva carrera.
+Té nostàlgia i funciona per clips. Risc: necessita una base de dades impecable.
+
+9. FITXA O PASSA
+Format: scouting i risc.
+Veure dades incompletes d’un jugador i decidir si fitxar-lo, esperar o passar. Després es revela el potencial.
+Connecta directament amb TrophyLeagues. Risc: cal equilibrar molt bé la informació.
+
+8. EL MERCAT DE FITXATGES
+Format: economia i gestió diària.
+Comprar i vendre jugadors abans que canviï el valor, amb informació parcial i notícies del mercat.
+Pot crear retorn diari i connecta amb la gestió. Risc: semblar un fantasy genèric.
+
+7. MANAGER EN 60 SEGONS
+Format: gestió ràpida.
+Triar alineació, formació, estil, substitucions i una instrucció abans d’un partit simulat.
+És el millor pont cap al joc gran. Risc: el resultat ha de ser explicable.
+
+6. QUI GUANYA AQUEST PARTIT?
+Format: simulació i debat històric.
+Comparar dos equips de diferents èpoques, triar tàctica i veure una simulació explicada.
+Pot provocar discussions sobre equips històrics. Risc: la simulació no pot semblar aleatòria.
+
+5. DRAFT IMPOSSIBLE
+Format: draft amb restriccions.
+Construir un onze amb pressupost o regles absurdes: només suplents, només esquerrans o només jugadors d’una dècada.
+Molt compartible i amb respostes molt diferents. Risc: les puntuacions han de semblar justes.
+
+4. PRESS CONFERENCE
+Format: narrativa i humor.
+Respondre preguntes després del partit i veure l’impacte sobre vestidor, afició, directiva i premsa.
+Pot aportar personalitat pròpia i humor. Risc: caldrà escriure moltes variants.
+
+3. QUIN JUGADOR ÉS?
+Format: repte diari tipus Wordle.
+Endevinar un jugador amb pistes sobre clubs, país, posició, edat i títols.
+Pot crear un hàbit diari i és fàcil de compartir. Risc: el format ja existeix; cal diferenciar-lo amb categories i comunitat.
+
+2. DRAFT D’ONZES HISTÒRICS
+Format: draft, nostàlgia i debat.
+Construir l’onze ideal d’un Mundial, Eurocopa, Champions, selecció, club o dècada.
+Combina memòria, rivalitat i identitat. És la millor aposta per començar. Risc: revisar drets de noms, imatges, escuts i competicions.
+
+1. TROPHYLEAGUES DAILY
+Format: plataforma de reptes.
+Un repte diari d’1–3 minuts amb tres intents, puntuació, classificació d’amics, temporada i resultat compartible. Cada dia pot ser draft, scouting, trivia, humor o gestió.
+La novetat és el sistema: futbol, debat, humor i competició recurrent connectats amb el joc principal. Risc: cal construir bé comptes, classificacions i contingut recurrent.
+
+MVP RECOMANAT
+Primera versió:
+- portada amb el repte del dia;
+- Draft d’onzes històrics;
+- Quin jugador és?;
+- Fitxa o passa amb jugadors ficticis;
+- tres intents;
+- puntuació i resultat final;
+- targeta compartible;
+- classificació simulada;
+- enllaç a la beta de TrophyLeagues.
+
+Segona versió:
+- comptes i historial;
+- grups d’amics amb codi;
+- classificació d’amics;
+- temporades mensuals;
+- divisions i ascensos;
+- recompenses visuals.
+
+APP O WEB?
+Primer web app/PWA. És més ràpid, funciona en mòbil i es pot afegir a la pantalla d’inici. Si demostra ús recurrent, convertir-la en APK. No construiria iOS/Android abans de validar la idea.
+
+POSICIONAMENT DAVANT LA COMPETÈNCIA
+No competir amb “un altre joc de penals”. Els portals web ja tenen molts penals, tirs lliures, arcade, 1 contra 1 i managers.
+La diferència ha de ser:
+- futbol real i nostàlgia;
+- resultats que generen debat;
+- humor i frases memorables;
+- repte diari amb amics;
+- temporades i classificacions;
+- connexió amb TrophyLeagues.
+
+PROMOCIÓ
+Cada repte ha de generar una peça compartible:
+- “El 72% ha descartat aquest jugador. Tu el fitxaries?”
+- “Construeix un onze millor que el nostre.”
+- “Només tens tres intents per reconèixer aquesta carrera.”
+- “La comunitat ha triat aquest jugador com el més sobrevalorat.”
+- “Has salvat el club o l’has enfonsat?”
+El vídeo ha d’ensenyar el dilema o resultat en els primers segons.
+
+MONETITZACIÓ
+- anuncis entre reptes o després del resultat;
+- subscripció petita sense anuncis quan hi hagi ús recurrent;
+- temes visuals i insígnies;
+- temporades patrocinades;
+- reptes amb creadors, podcasts i mitjans futbolístics;
+- conversió cap a TrophyLeagues, beta i recompenses.
+No assumiria que els anuncis donaran un sou decent al principi. Primer cal ús recurrent, audiència pròpia i comunitat.
+
+DRETS
+Els noms, imatges i semblances de jugadors poden requerir llicències comercials. Escuts, marques de clubs, competicions i fotografies poden requerir drets separats. Per validar: text i disseny propi, sense fotografies, cares recreades, escuts copiats ni aparença oficial. Abans de monetitzar fortament, fer una revisió legal.
+
+PROMPTS PER A GOOGLE AI STUDIO
+
+PROMPT 1: MVP
+“Crea una web app responsive anomenada TrophyLeagues Daily amb HTML, CSS i JavaScript sense frameworks. Inclou una portada amb el repte del dia i tres modes: Draft d’onzes històrics, Quin jugador és? i Fitxa o passa. Inclou tres intents, puntuació, classificació simulada, pantalla final amb percentil, frase humorística, botó de compartir i targeta visual. Fes un disseny mobile-first, esportiu i premium. No copiïs marques, logos ni escuts oficials. Usa dades de prova. Mantén el projecte en index.html, styles.css i app.js. No afegeixis backend ni autenticació encara. Fes primer una versió mínima jugable.”
+
+PROMPT 2: DRAFT
+“Afegeix un mode de draft d’onzes històrics al projecte existent. El jugador ha de triar una formació i omplir porter, defensa, mig del camp i atac en rondes limitades. Inclou categories de Mundial, dècada, selecció, club històric i Champions. Mostra posició, país, època i resum estadístic. Compara el resultat amb una mitjana simulada de la comunitat i crea una pantalla final amb una frase humorística. No reescriguis tota l’aplicació. No utilitzis fotografies, escuts ni logos oficials.”
+
+PROMPT 3: WORDLE
+“Afegeix un repte diari tipus Wordle futbolístic. Dona sis intents per identificar un jugador amb pistes de país, posició, dècada, clubs, títols i una dada curiosa. El resultat s’ha de poder compartir sense revelar la resposta. Inclou comptador, barra de progrés i dades de prova en un fitxer JSON separat. No modifiquis els altres modes.”
+
+PROMPT 4: SCOUTING
+“Afegeix un mode de scouting ràpid. Mostra un jugador fictici amb informes incomplets, edat, posició, preu, tres atributs i una recomanació d’un scout. L’usuari tria FITXA, ESPERA o PASSA. Després revela potencial, risc i valor futur. La decisió afecta una puntuació de manager. Inclou cinc casos i classifica l’usuari com a scout prudent, intuïtiu o temerari.”
+
+PROMPT 5: QA
+“Revisa el projecte com a product manager i QA tester. No afegeixis funcionalitats. Comprova que l’usuari entén què ha de fer en menys de deu segons, que funciona en mòbil, que una partida dura menys de tres minuts, que la puntuació és explicable, que tots els botons funcionen, que es pot reiniciar i que no hi ha errors de consola. Aplica només correccions necessàries i retorna les proves realitzades.”
+
+PLA DE 90 DIES
+Setmanes 1–2: shell i Draft.
+Setmanes 3–4: Wordle futbolístic i scouting.
+Setmanes 5–6: targetes, historial i classificació.
+Setmanes 7–8: proves amb amics i publicació.
+Setmanes 9–12: contingut diari, xarxes i decidir quin mode mereix més inversió.
+
+MÈTRIQUES
+- partides començades i acabades;
+- retorn l’endemà i durant la setmana;
+- resultats compartits;
+- invitacions a amics;
+- registres a la beta de TrophyLeagues;
+- quin mode genera més retorn, no només més clics;
+- temps i cost de crear cada repte.
+
+CONCLUSIÓ
+La millor aposta és una plataforma futbolística de reptes diaris, no quinze jocs independents. Començaria amb Draft d’onzes històrics, Quin jugador és? i Fitxa o passa. Si la gent torna, comparteix i convida amics, afegiria temporades, divisions, APK i monetització. TrophyLeagues continua sent el producte principal; els minijocs creen audiència i comunitat.
+
+REFERÈNCIES
+CrazyGames: https://www.crazygames.com/t/soccer
+PlayUs: https://play.google.com/store/apps/details?id=club.playus
+FIFPRO licensing: https://www.fifpro.org/en/who-we-are/contact/video-game-developers

@@ -1,0 +1,10 @@
+{
+  "categories": ["Mundial", "Eurocopa", "Champions", "Dècades"],
+  "formations": ["4-3-3", "4-4-2", "3-5-2"],
+  "players": [
+    {"id":"p1","name":"Jugador Exemple 1","position":"GK","country":"País A","era":"2000s","quality":92},
+    {"id":"p2","name":"Jugador Exemple 2","position":"DEF","country":"País B","era":"2010s","quality":90},
+    {"id":"p3","name":"Jugador Exemple 3","position":"MID","country":"País C","era":"1990s","quality":94},
+    {"id":"p4","name":"Jugador Exemple 4","position":"FWD","country":"País D","era":"2000s","quality":95}
+  ]
+}

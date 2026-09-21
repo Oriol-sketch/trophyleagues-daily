@@ -1,0 +1,1 @@
+Afegeix només Draft impossible. Cada repte té una restricció del dia i cinc rondes. Implementa pressupost opcional, validació de restriccions, puntuació i targeta compartible. Inclou deu restriccions de prova.

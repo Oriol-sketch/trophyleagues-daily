@@ -1,0 +1,1 @@
+Implementa les estructures de dades definides: players.json, clubs.json, nationalTeams.json, historicalTeams.json, dailyChallenges.json, fictionalScouting.json i humorText.json. Connecta-les als components. Guarda intents, puntuació, ratxa i reptes completats en localStorage. No afegeixis backend encara.

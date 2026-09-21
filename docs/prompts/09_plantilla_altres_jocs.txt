@@ -1,0 +1,1 @@
+Implementa els jocs 06 a 14 un per un utilitzant el fitxer 03_ORDRE_JOCS.md. Per cada joc: mostra primer el flux de cinc passos, crea només les pantalles mínimes, reutilitza puntuació/resultat/compartir, mantén la partida entre 30 segons i 3 minuts i atura’t després d’un sol joc.

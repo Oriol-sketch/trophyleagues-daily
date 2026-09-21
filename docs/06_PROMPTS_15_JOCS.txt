@@ -1,0 +1,77 @@
+UTILITZACIÓ
+Per cada joc, envia el prompt de CONSTRUCCIÓ. Prova’l. Després envia QA. Només si QA troba problemes, envia CORRECCIÓ. No enviïs el joc següent fins que el criteri de finalització estigui complert.
+
+01 DRAFT D’ONZES HISTÒRICS
+CONSTRUCCIÓ: Afegeix el joc 01 segons 05_ESPECIFICACIO_COMPLETA_15_JOCS.md. Implementa categories, formació, onze rondes, cartes, validació, puntuació explicable, resultat, percentil i targeta compartible. Mantén la partida entre 2 i 3 minuts. No reescriguis l’arquitectura comuna.
+QA: Prova totes les formacions, categories buides, doble clic, posició repetida, reinici i resultat compartible. Revisa mòbil i consola.
+CORRECCIÓ: Corregeix només els errors demostrats pel QA anterior. No afegeixis funcionalitats noves.
+
+02 QUIN JUGADOR ÉS
+CONSTRUCCIÓ: Afegeix el joc 02 amb sis intents, pistes progressives, variants de noms, ratxa, puntuació i compartir sense revelar la resposta. Usa players.json i no modifiquis el Draft.
+QA: Prova accents, resposta buida, resposta repetida, resposta correcta, sisè intent, reinici i canvi de dia.
+CORRECCIÓ: Aplica només correccions relacionades amb els errors del QA.
+
+03 FITXA O PASSA
+CONSTRUCCIÓ: Afegeix el joc 03 amb cinc jugadors ficticis, opcions Fitxa/Espera/Passa, potencial ocult, risc, revelació, puntuació i perfil d’scout. Durada màxima de 3 minuts.
+QA: Prova doble clic, dades incompletes, final de cinc casos, reinici i puntuació.
+CORRECCIÓ: Corregeix només problemes reproduïbles.
+
+04 MANAGER EN 60 SEGONS
+CONSTRUCCIÓ: Afegeix el joc 04 amb cinc decisions, simulació explicada, marcador, causes del resultat i puntuació. Limita aleatorietat i mostra els atributs que han influït.
+QA: Prova totes les combinacions, reinici, resultat explicable i vista mòbil.
+CORRECCIÓ: Corregeix la lògica sense canviar el flux.
+
+05 DRAFT IMPOSSIBLE
+CONSTRUCCIÓ: Afegeix el joc 05 amb cinc rondes, una restricció diària, validació, pressupost opcional, puntuació i targeta compartible. Inclou deu restriccions de prova.
+QA: Prova restricció impossible, jugador repetit, pressupost excedit i partida finalitzada.
+CORRECCIÓ: Corregeix únicament les incidències detectades.
+
+06 PRESS CONFERENCE
+CONSTRUCCIÓ: Afegeix cinc decisions amb quatre tipus de resposta. Actualitza afició, vestidor, directiva i premsa. Genera titular i perfil final.
+QA: Prova que totes les respostes modifiquen valors i que el resultat és coherent.
+CORRECCIÓ: Corregeix els valors o textos incoherents.
+
+07 CARRERA MISTERIOSA
+CONSTRUCCIÓ: Afegeix tres pistes progressives per jugador i puntuació segons la pista utilitzada. Accepta variants de nom i mostra una explicació final.
+QA: Prova pistes, noms alternatius i partida acabada.
+CORRECCIÓ: Corregeix només validació i estat.
+
+08 QUI GUANYA AQUEST PARTIT
+CONSTRUCCIÓ: Afegeix dos equips, elecció de formació i estil, simulació amb qualitat/encaix/context i explicació del marcador.
+QA: Prova els dos sentits del partit i comprova que no sigui purament aleatori.
+CORRECCIÓ: Ajusta només la simulació o l’explicació defectuosa.
+
+09 MERCAT DE FITXATGES
+CONSTRUCCIÓ: Afegeix cinc rondes de comprar/vendre/esperar amb jugadors ficticis, notícies, preus i valor final de plantilla.
+QA: Prova saldo insuficient, venda sense jugador, ronda final i reinici.
+CORRECCIÓ: Corregeix només economia i estats incorrectes.
+
+10 EL VAR HA PARLAT
+CONSTRUCCIÓ: Afegeix decisions de penal, fora de joc, vermella, mà i simulació. Mostra resposta de comunitat i explicació.
+QA: Prova cada resposta i la visualització de l’explicació.
+CORRECCIÓ: Corregeix només resultats o textos incorrectes.
+
+11 ASCENS EXPRÉS
+CONSTRUCCIÓ: Afegeix cinc jornades, decisions de fitxatge, entrenament, tàctica i vestidor. Calcula posició final i causes principals.
+QA: Prova ascens, descens, empat i reinici.
+CORRECCIÓ: Corregeix només classificació i càlcul.
+
+12 SIMULADOR DE PRESIDENT
+CONSTRUCCIÓ: Afegeix deu crisis, quatre variables i tres decisions per crisi. Genera titular i resultat final amb humor.
+QA: Prova valors mínims, valors màxims, final de temporada i textos.
+CORRECCIÓ: Corregeix només bloquejos i inconsistències.
+
+13 FOOTBALL CHAOS
+CONSTRUCCIÓ: Afegeix tres regles arcade i una partida d’un minut. Prioritza una sola pantalla i controls simples.
+QA: Prova controls, final, reinici i mòbil.
+CORRECCIÓ: Corregeix només controls i col·lisions.
+
+14 ON ÉS EL JUGADOR
+CONSTRUCCIÓ: Afegeix pistes geogràfiques amb quatre opcions i puntuació segons pista. No depenguis d’un mapa extern.
+QA: Prova banderes, dades buides, resposta correcta i reinici.
+CORRECCIÓ: Corregeix només dades i validació.
+
+15 TROPHYLEAGUES DAILY
+CONSTRUCCIÓ: Connecta tots els jocs al selector de repte diari. Implementa tres intents, rotació per data, puntuació, ratxa, classificació local i resultat compartible.
+QA: Prova canvi de data, repte completat, intent esgotat, mode desconegut i localStorage corrupte.
+CORRECCIÓ: Corregeix només orquestració i persistència.

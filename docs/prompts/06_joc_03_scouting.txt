@@ -1,0 +1,1 @@
+Afegeix només Fitxa o passa. Implementa cinc jugadors ficticis, opcions Fitxa/Espera/Passa, potencial ocult, risc, conseqüències, puntuació i classificació final del tipus d’scout. Durada màxima: 3 minuts.

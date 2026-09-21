@@ -1,0 +1,1 @@
+Afegeix grups d’amics amb codi, classificació Avui/Setmana/Temporada, ratxa, tres intents i temporades de 28 dies. Utilitza localStorage i membres de prova. Mantén preparada la separació perquè més endavant es pugui connectar a un backend. No afegeixis xat ni pagaments.

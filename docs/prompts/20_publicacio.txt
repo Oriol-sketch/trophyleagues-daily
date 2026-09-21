@@ -1,0 +1,1 @@
+Prepara la web app per publicar-la. Revisa title, meta description, favicon, manifest PWA, responsive, pantalla offline bàsica, errors i instruccions de desplegament. No afegeixis pagaments ni analítica invasiva. Indica els fitxers finals i els passos per publicar. Després explica com empaquetar la PWA com a APK sense reescriure el projecte.

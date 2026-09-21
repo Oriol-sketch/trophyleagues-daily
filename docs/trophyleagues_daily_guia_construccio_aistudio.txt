@@ -1,0 +1,474 @@
+TROPHYLEAGUES DAILY
+GUIA DE CONSTRUCCIÓ PER A GOOGLE AI STUDIO
+Versió funcional i tècnica per construir l’MVP per fases
+
+OBJECTIU DEL DOCUMENT
+Aquest document és una guia perquè Google AI Studio construeixi una primera versió real de TrophyLeagues Daily: una plataforma tipus PlayUs, però especialitzada en futbol, nostàlgia, debat, humor i gestió.
+
+Els minijocs són ràpids. No s’han de convertir en quinze aplicacions grans. Cada repte ha de poder començar-se en pocs segons i acabar-se en aproximadament un o tres minuts.
+
+TrophyLeagues Daily no substitueix TrophyLeagues. És la plataforma de captació, hàbit i comunitat. TrophyLeagues és el joc principal de gestió profunda.
+
+============================================================
+1. PRINCIPIS DEL PRODUCTE
+============================================================
+
+1. Mobile-first: ha de funcionar primer en mòbil.
+2. Sense tutorial llarg: el jugador ha d’entendre el repte en menys de deu segons.
+3. Una acció principal per pantalla.
+4. Cada partida dura entre trenta segons i tres minuts.
+5. Cada dia hi ha un repte principal.
+6. Tres intents màxim per repte diari.
+7. Cada resultat ha de poder-se compartir.
+8. Els minijocs comparteixen comptes, puntuació, classificació i disseny.
+9. El contingut ha de poder créixer sense reescriure el programa.
+10. No construir backend complex en la primera demo si AI Studio encara no ho necessita.
+
+============================================================
+2. ESTRUCTURA GENERAL DE L’APLICACIÓ
+============================================================
+
+PANTALLES DE L’MVP
+
+1. Inici
+   - logo TrophyLeagues Daily;
+   - repte del dia;
+   - temps estimat de partida;
+   - botó JUGAR;
+   - puntuació del jugador;
+   - accés a classificació;
+   - accés a TrophyLeagues.
+
+2. Selector de reptes
+   - repte del dia destacat;
+   - reptes anteriors;
+   - modes disponibles;
+   - etiqueta “nou”, “diari” o “especial”.
+
+3. Pantalla de joc
+   - títol curt;
+   - instrucció d’una frase;
+   - progrés o intents restants;
+   - contingut del repte;
+   - una acció principal.
+
+4. Resultat
+   - puntuació;
+   - percentil o posició simulada;
+   - explicació curta;
+   - frase humorística;
+   - botó compartir;
+   - botó repetir si encara queden intents;
+   - botó següent repte.
+
+5. Classificació
+   - avui;
+   - setmana;
+   - temporada;
+   - amics;
+   - global.
+
+6. Perfil
+   - nom o àlies;
+   - títol futbolístic;
+   - puntuació;
+   - rècords;
+   - insígnies;
+   - enllaç a la beta de TrophyLeagues.
+
+7. TrophyLeagues
+   - explicació breu del joc principal;
+   - screenshots o il·lustracions;
+   - registre a la llista d’espera;
+   - botó “Construir el meu club”.
+
+L’MVP no necessita encara:
+- xat;
+- multiplayer en temps real;
+- botiga;
+- pagaments;
+- notificacions natives;
+- sistema d’amics complex;
+- editor de clubs;
+- app nativa.
+
+============================================================
+3. MODEL DE DADES INICIAL
+============================================================
+
+AI Studio ha de mantenir les dades separades de la interfície.
+
+dailyChallenges.json
+- id;
+- date;
+- type;
+- title;
+- subtitle;
+- category;
+- difficulty;
+- content;
+- correctAnswer;
+- acceptedAnswers;
+- explanation;
+- shareText;
+
+players.json
+- id;
+- name;
+- nationality;
+- position;
+- birthYear;
+- clubs;
+- teams;
+- trophies;
+- activeYears;
+- tags;
+
+fictionalScouting.json
+- id;
+- name;
+- age;
+- position;
+- price;
+- visibleAttributes;
+- hiddenPotential;
+- risk;
+- scoutNote;
+- outcome;
+
+userState
+- username;
+- dailyAttempts;
+- dailyScore;
+- totalScore;
+- seasonScore;
+- badges;
+- completedChallenges;
+- streak;
+
+groupState
+- groupCode;
+- groupName;
+- members;
+- seasonScores;
+
+En la primera versió, userState i groupState poden guardar-se en localStorage. AI Studio no ha d’inventar un backend si no se li demana explícitament.
+
+============================================================
+4. SISTEMA DE PUNTUACIÓ
+============================================================
+
+Regles comunes:
+- cada repte té tres intents;
+- l’intent perfecte dona la màxima puntuació;
+- els intents posteriors redueixen la puntuació;
+- una partida acabada sempre dona un resultat;
+- no es pot repetir infinitament el repte diari;
+- la classificació local pot ser simulada a l’MVP;
+- la puntuació ha de ser explicable.
+
+Exemple:
+- resposta correcta al primer intent: 100 punts;
+- segon intent: 75 punts;
+- tercer intent: 50 punts;
+- resposta incorrecta: 0 punts;
+- bonus per ratxa: màxim 20 punts;
+- bonus per dificultat: màxim 30 punts.
+
+============================================================
+5. TOP 15 MINIJOCS I ESPECIFICACIÓ
+============================================================
+
+15. ON ÉS EL JUGADOR?
+Format: geografia i trivia.
+Partida: apareixen tres pistes sobre país, ciutat, club o ruta de fitxatges.
+Acció principal: triar una resposta entre quatre opcions.
+Durada: 30–60 segons.
+Resultat: punts segons la pista amb què s’ha encertat.
+Valor: internacional i fàcil d’ampliar.
+Risc: menys emocional.
+MVP: cinc preguntes, dades de prova, sense mapa complex.
+
+14. FOOTBALL CHAOS
+Format: arcade humorístic.
+Partida: partit curt amb una regla absurda diferent.
+Acció principal: moure, xutar o reaccionar.
+Durada: 1–2 minuts.
+Resultat: gols, temps i frase humorística.
+Valor: clips i moments inesperats.
+Risc: competir amb molts arcades.
+MVP: una sola pantalla, una pilota i tres regles absurdes.
+
+13. EL VAR HA PARLAT
+Format: decisió i debat.
+Partida: es mostra una jugada descrita o una animació simple.
+Acció principal: PENAL, NO PENAL, VERMELLA o CONTINUÏ.
+Durada: 30–90 segons.
+Resultat: comparació amb la comunitat.
+Valor: genera comentaris i discussió.
+Risc: la resposta ha de tenir una explicació.
+MVP: text, il·lustració simple i votació.
+
+12. SIMULADOR DE PRESIDENT
+Format: humor i decisions.
+Partida: cinc situacions d’un club en crisi.
+Acció principal: triar una de tres decisions.
+Durada: 2–3 minuts.
+Resultat: diners, afició, vestidor i reputació.
+Valor: contingut humorístic compartible.
+Risc: pot atreure trànsit poc qualificat.
+MVP: una temporada fictícia i deu situacions.
+
+11. ASCENS EXPRÉS
+Format: manager curt.
+Partida: prendre decisions sobre onze, fitxatges i entrenament.
+Acció principal: triar una opció per jornada.
+Durada: 2–3 minuts.
+Resultat: ascens, permanència o descens.
+Valor: fantasia de club.
+Risc: pot ser massa simple o massa llarg.
+MVP: cinc jornades i tres decisions per jornada.
+
+10. CARRERA MISTERIOSA
+Format: memòria futbolística.
+Partida: descobrir un jugador amb la seva trajectòria parcial.
+Acció principal: escriure o triar el nom.
+Durada: 30–90 segons.
+Resultat: punts segons pistes utilitzades.
+Valor: nostàlgia i vídeos curts.
+Risc: base de dades mal revisada.
+MVP: cinc jugadors i tres pistes cadascun.
+
+9. FITXA O PASSA
+Format: scouting i risc.
+Partida: cinc jugadors ficticis amb informació incompleta.
+Acció principal: FITXA, ESPERA o PASSA.
+Durada: 2–3 minuts.
+Resultat: valor de la plantilla i tipus de scout.
+Valor: connexió directa amb TrophyLeagues.
+Risc: equilibri de dades.
+MVP: cinc casos, potencial ocult i explicació posterior.
+
+8. EL MERCAT DE FITXATGES
+Format: economia diària.
+Partida: comprar i vendre tres jugadors amb notícies parcials.
+Acció principal: comprar, vendre o esperar.
+Durada: 2–3 minuts.
+Resultat: benefici o pèrdua.
+Valor: retorn diari i gestió.
+Risc: semblar un fantasy genèric.
+MVP: mercat fictici sense diners reals.
+
+7. MANAGER EN 60 SEGONS
+Format: gestió ràpida.
+Partida: preparar un partit amb cinc decisions.
+Acció principal: escollir tàctica, onze i canvi.
+Durada: 60–90 segons.
+Resultat: partit simulat amb explicació.
+Valor: millor pont cap a TrophyLeagues.
+Risc: resultat arbitrari.
+MVP: tres estils de joc i cinc atributs.
+
+6. QUI GUANYA AQUEST PARTIT?
+Format: simulació històrica.
+Partida: comparar dos equips d’èpoques diferents.
+Acció principal: triar guanyador i tàctica.
+Durada: 1–2 minuts.
+Resultat: simulació i explicació de factors.
+Valor: debat històric.
+Risc: credibilitat del simulador.
+MVP: equips representats només amb text i atributs.
+
+5. DRAFT IMPOSSIBLE
+Format: draft amb restriccions.
+Partida: construir un onze sota una regla especial.
+Acció principal: triar una carta cada ronda.
+Durada: 2–3 minuts.
+Resultat: puntuació i comparació amb la comunitat.
+Valor: compartible i diferent cada dia.
+Risc: valoracions discutibles.
+MVP: cinc rondes i una regla del dia.
+
+4. PRESS CONFERENCE
+Format: narrativa humorística.
+Partida: respondre cinc preguntes després d’un partit.
+Acció principal: triar resposta.
+Durada: 1–2 minuts.
+Resultat: afició, vestidor, premsa i directiva.
+Valor: humor i personalitat de marca.
+Risc: necessita moltes variants.
+MVP: deu situacions i tres respostes per situació.
+
+3. QUIN JUGADOR ÉS?
+Format: Wordle futbolístic.
+Partida: sis intents amb pistes progressives.
+Acció principal: escriure o triar un jugador.
+Durada: 1–2 minuts.
+Resultat: intents, percentil i ratxa.
+Valor: hàbit diari molt clar.
+Risc: format conegut.
+MVP: una resposta al dia, dades JSON i resultat compartible.
+
+2. DRAFT D’ONZES HISTÒRICS
+Format: draft, nostàlgia i debat.
+Partida: construir un onze d’un Mundial, selecció, club, època o competició.
+Acció principal: triar una carta per posició.
+Durada: 2–3 minuts.
+Resultat: puntuació, estil d’equip i comparació amb la comunitat.
+Valor: gran potencial de debat i xarxes.
+Risc: drets de contingut real.
+MVP: quatre categories, onze posicions i dades textuals.
+
+1. TROPHYLEAGUES DAILY
+Format: plataforma de reptes.
+Partida: repte diari triat d’un catàleg de modes.
+Acció principal: jugar, obtenir puntuació i compartir.
+Durada: 1–3 minuts.
+Resultat: puntuació, classificació, ratxa i temporada.
+Valor: el sistema és el producte; els jocs són contingut recurrent.
+Risc: construir massa coses abans de validar.
+MVP: tres modes, tres intents, puntuació local i resultat compartible.
+
+============================================================
+6. FLUX SOCIAL TIPUS PLAYUS
+============================================================
+
+MVP:
+1. La persona entra.
+2. Veu el repte del dia.
+3. Juga amb tres intents.
+4. Rep una targeta amb puntuació i frase humorística.
+5. Comparteix o convida un amic.
+6. Torna l’endemà.
+
+Versió posterior:
+- crear grup amb codi;
+- classificació del grup;
+- temporada de 28 dies;
+- ascensos i descensos;
+- repte final de temporada;
+- recompenses de perfil;
+- insígnia o prioritat per a la beta de TrophyLeagues.
+
+============================================================
+7. PROMPTS PER A AI STUDIO
+============================================================
+
+PROMPT 0: REGLA GENERAL
+
+“Treballa per fases i no intentis construir tota l’aplicació en una sola resposta. Mantén una arquitectura modular. Abans d’escriure codi, mostra els fitxers que crearàs i el pla curt. No reescriguis fitxers que no siguin necessaris. Quan una fase estigui acabada, atura’t i indica com provar-la.”
+
+PROMPT 1: ARQUITECTURA MVP
+
+“Crea una web app responsive mobile-first anomenada TrophyLeagues Daily amb HTML, CSS i JavaScript sense frameworks. És una plataforma tipus PlayUs, però només de reptes futbolístics.
+
+Construeix inicialment només: Inici, Selector de reptes, pantalla de joc, Resultat i secció TrophyLeagues. Inclou tres intents, puntuació, resultat compartible i classificació local simulada.
+
+Fes servir dades separades en dailyChallenges.json, players.json i fictionalScouting.json. Guarda l’estat de prova en localStorage. Mantén l’arquitectura preparada per afegir modes nous. No afegeixis backend, autenticació, pagaments ni multiplayer en aquesta fase. Primer crea una versió mínima jugable i prova-la en mòbil.”
+
+PROMPT 2: SISTEMA DE DISSENY
+
+“Defineix i aplica un sistema visual propi per TrophyLeagues Daily. Ha de ser futbolístic, modern, premium i jugable en mòbil. Utilitza contrast alt, targetes clares, animacions breus, jerarquia visual i botons grans. No copiïs cap marca, escut o interfície existent. Prioritza velocitat, llegibilitat i una sensació de joc, no d’aplicació administrativa.”
+
+PROMPT 3: DRAFT D’ONZES
+
+“Afegeix només el mode Draft d’onzes històrics. El jugador escull una categoria, una formació i onze jugadors durant rondes limitades. Cada carta mostra nom, posició, nacionalitat, època i dues dades estadístiques. Després calcula una puntuació explicable per cobertura de posicions, equilibri i qualitat. Inclou resultat, percentil simulat, frase humorística i targeta compartible. No afegeixis fotografies, logos ni escuts.”
+
+PROMPT 4: QUIN JUGADOR ÉS
+
+“Afegeix només el mode Quin jugador és? tipus Wordle futbolístic. El jugador té sis intents. Mostra pistes progressives de nacionalitat, posició, dècada, clubs, títols i una dada curiosa. Permet compartir el resultat sense revelar la resposta. Utilitza players.json i no modifiquis el Draft.”
+
+PROMPT 5: FITXA O PASSA
+
+“Afegeix només el mode Fitxa o passa. Mostra cinc jugadors ficticis amb edat, posició, preu, tres atributs visibles i una nota d’scout. L’usuari pot triar FITXA, ESPERA o PASSA. Després revela potencial, risc, valor futur i conseqüència. Calcula una puntuació final i classifica el jugador com a scout prudent, intuïtiu o temerari.”
+
+PROMPT 6: RESULTAT I COMPARTIR
+
+“Millora només la pantalla de resultat comuna. Ha de mostrar puntuació, percentil, intents, ratxa, frase humorística i botó de compartir. Genera una targeta visual de text que es pugui copiar o descarregar. No simulis funcionalitats socials reals; si encara no hi ha backend, indica clarament que la classificació és de prova.”
+
+PROMPT 7: CLASSIFICACIÓ LOCAL
+
+“Afegeix una classificació local de prova. Crea noms ficticis, puntuacions i posicions. Mostra pestanyes Avui, Setmana i Temporada. Guarda la puntuació del jugador local i impedeix que una persona obtingui intents infinits en el repte diari. No afegeixis comptes ni servidor.”
+
+PROMPT 8: GRUPS D’AMICS
+
+“Afegeix una simulació funcional de grups d’amics amb codi. L’usuari pot crear un grup, posar-li un nom i veure una classificació local de membres ficticis. Deixa la lògica preparada per substituir localStorage per backend més endavant. No afegeixis xat ni notificacions.”
+
+PROMPT 9: QA FINAL
+
+“Revisa el projecte com a product manager i QA tester. No afegeixis funcionalitats noves. Comprova que l’usuari entén el joc en menys de deu segons, que cada repte dura menys de tres minuts, que funciona en mòbil, que es pot reiniciar, que no hi ha botons buits, que la puntuació és explicable i que no hi ha errors de consola. Aplica només correccions necessàries.”
+
+PROMPT 10: PREPARAR PUBLICACIÓ
+
+“Prepara el projecte per publicar-lo com a web app. Revisa càrrega, responsive, metadades, títol, descripció, favicon, pantalla d’error i accessibilitat bàsica. No afegeixis analítica invasiva ni serveis de pagament. Indica exactament quins fitxers s’han de publicar i com provar-los abans de compartir l’enllaç.”
+
+============================================================
+8. PROMPTS DE CONTINGUT PER ALS 15 MODES
+============================================================
+
+Per cada mode nou, utilitza aquesta plantilla:
+
+“Afegeix un nou mode modular anomenat [NOM]. Ha de durar entre [DURADA]. La pantalla ha de tenir només una acció principal. La partida té [NOMBRE] rondes o intents. Defineix una puntuació explicable, un resultat final, una frase humorística i una targeta compartible. Utilitza dades separades i no trenquis els modes existents. Abans d’escriure codi, explica el flux de la partida en cinc passos. Després implementa només aquest mode i fes proves manuals.”
+
+============================================================
+9. PROMOCIÓ
+============================================================
+
+Cada repte ha de generar contingut:
+- “El 72% ha descartat aquest jugador. Tu el fitxaries?”
+- “Construeix un onze millor que el nostre.”
+- “Només tens tres intents.”
+- “La comunitat ha triat el jugador més sobrevalorat.”
+- “Has salvat el club o l’has enfonsat?”
+
+El vídeo ha d’ensenyar el dilema en els primers segons. La crida no ha de ser només “entra a la web”, sinó “supera’m”, “tria el teu onze” o “demostra que en saps més”.
+
+============================================================
+10. MONETITZACIÓ
+============================================================
+
+Fase inicial: cap pagament obligatori.
+Quan hi hagi ús recurrent:
+- anuncis entre reptes, mai abans d’una partida curta;
+- opció sense anuncis;
+- temes visuals i insígnies;
+- temporades patrocinades;
+- reptes amb creadors i podcasts;
+- conversió cap a TrophyLeagues.
+
+No construir una botiga abans de validar retorn, comparticions i grups d’amics.
+
+============================================================
+11. DRETS
+============================================================
+
+Els noms, imatges i semblances de jugadors poden requerir llicències comercials. Els escuts, marques de clubs, competicions i fotografies poden requerir drets separats. Per validar el producte, utilitzar disseny propi, text i dades, sense fotografies, cares recreades, escuts copiats ni aparença oficial. Abans de monetitzar fortament amb contingut real, fer una revisió legal.
+
+============================================================
+12. PLA DE 90 DIES
+============================================================
+
+Setmanes 1–2: arquitectura, disseny i Draft.
+Setmanes 3–4: Quin jugador és? i dades separades.
+Setmanes 5–6: Fitxa o passa i resultat compartible.
+Setmanes 7–8: classificació local i proves amb amics.
+Setmanes 9–10: grups simulats i contingut per xarxes.
+Setmanes 11–12: publicar, mesurar i escollir el mode guanyador.
+
+MÈTRIQUES
+- partides iniciades i acabades;
+- retorn l’endemà;
+- retorn durant la setmana;
+- resultats compartits;
+- invitacions a amics;
+- registres a TrophyLeagues;
+- temps de creació de cada repte;
+- quin mode genera més retorn, no només més clics.
+
+CONCLUSIÓ
+No demaneu a AI Studio que construeixi tota l’app en un prompt. Passeu-li aquest document per fases. Primer l’arquitectura, després el sistema visual, després un minijoc, després el següent, i finalment classificacions i grups. Els minijocs han de ser curts; el valor diferencial és la plataforma, la competició recurrent i la connexió amb TrophyLeagues.
+
+REFERÈNCIES
+CrazyGames: https://www.crazygames.com/t/soccer
+PlayUs: https://play.google.com/store/apps/details?id=club.playus
+FIFPRO licensing: https://www.fifpro.org/en/who-we-are/contact/video-game-developers

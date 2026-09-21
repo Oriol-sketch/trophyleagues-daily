@@ -1,0 +1,1 @@
+Llegeix tots els fitxers adjunts com l’especificació general de TrophyLeagues Daily. No construeixis encara tota l’aplicació. Confirma que entens l’arquitectura, els objectius, els 15 modes i l’ordre de construcció. Espera el següent prompt. Treballarem per fases i no has de reescriure fitxers no relacionats amb la fase activa.

@@ -1,0 +1,18 @@
+{
+  "challenges": [
+    {
+      "id": "2026-09-21-quin-jugador",
+      "date": "2026-09-21",
+      "gameId": "quin-jugador",
+      "title": "Repte del dia",
+      "blurb": "Identifica el jugador a partir de pistes curtes."
+    },
+    {
+      "id": "2026-09-22-draft-onzes",
+      "date": "2026-09-22",
+      "gameId": "draft-onzes",
+      "title": "Repte del dia",
+      "blurb": "Munta un onze amb restriccions de llegenda."
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+Fes una auditoria completa sense afegir funcionalitats. Prova cada mode en mòbil i escriptori. Comprova navegació, reinici, puntuació, intents, localStorage, dades buides, respostes invàlides, textos, accessibilitat, errors de consola, càrrega i que cap joc trenqui els altres. Corregeix només errors demostrables i entrega un informe curt.
